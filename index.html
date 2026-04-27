@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Crown Melbourne – Construction Timeline</title>
+
+<style>
+  body {
+<h1 style="color:red;">HTML IS LOADING</h1>    
+font-family: Arial, Helvetica, sans-serif;
+    margin: 24px;
+    background: #f6f7f9;
+  }
+
+  h1 { margin-bottom: 6px; }
+
+  .controls {
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-right: 6px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  button.active {
+    background: #2c7be5;
+    color: white;
+    border-color: #2c7be5;
+  }
+
+  .legend span {
+    margin-right: 14px;
+    font-size: 12px;
+  }
+
+  .Dining { background:#2c7be5 }
+  .Hotel { background:#28a745 }
+  .Gaming { background:#6f42c1 }
+  .Entertainment { background:#fd7e14 }
+  .TBC { background:#9e9e9e }
+
+  .gantt {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 16px;
+    overflow-x: auto;
+    position: relative;
+  }
+
+ .axis {
+  display: flex;
+  font-size: 11px;
+  margin-left: 260px;
+  margin-bottom: 6px;
+  min-width: 1200px;
+}
+
+  .axis div {
+    flex: 1;
+    text-align: center;
+    border-left: 1px solid #eee;
+    padding: 2px 0;
+  }
+
+.grid {
+  display: grid;
+  grid-template-columns: 260px minmax(1200px, 1fr);
+  row-gap: 10px;
+}
+
+
+  .labels {
+    display: grid;
+    grid-auto-rows: 32px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .timeline {
+  position: relative;
+  min-height: 400px;
+}
+
+  .row {
+    position: relative;
+    height: 32px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .bar {
+    position: absolute;
+    top: 5px;
+    height: 22px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .today-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: red;
+    z-index: 3;
+  }
+
+  .tooltip {
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 6px 8px;
+    font-size: 11px;
+    border-radius: 4px;
+    pointer-events: none;
+    white-space: nowrap;
+    display: none;
+    z-index: 10;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Crown Melbourne – Construction Timeline</h1>
+<p>Interactive programme view with spatial context</p>
+
+<div class="controls">
+  <button onclick="setFY('ALL')" class="active">All</button>
+  <button onclick="setFY('FY26')">FY26</button>
